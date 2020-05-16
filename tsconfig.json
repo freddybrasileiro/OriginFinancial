@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.paths.json",
   "compilerOptions": {
+    "esModuleInterop": true,
     "checkJs": false,
     "outDir": "./dist/",
     "module": "commonjs",
