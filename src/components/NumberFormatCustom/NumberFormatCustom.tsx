@@ -29,10 +29,5 @@ function NumberFormatCustom(props: NumberFormatCustomProps) {
       />
     );
 }
-  
-interface State {
-    textmask: string;
-    numberformat: string;
-}
 
 export default NumberFormatCustom
