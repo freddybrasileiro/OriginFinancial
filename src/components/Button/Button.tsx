@@ -1,11 +1,11 @@
 import React from 'react';
 import MaterialButton from '@material-ui/core/Button';
 
-type ButtonSeparatorProps = {
-  children: any;
+type ButtonProps = {
+  children: any
 };
 
-const Button = ({ children }: ButtonSeparatorProps) => (
+const Button = ({ children }: ButtonProps) => (
   <MaterialButton variant="contained">{ children }</MaterialButton>
 );
 
