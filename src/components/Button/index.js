@@ -1,12 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-
-import Teste from "../../components/Teste";
+import React from 'react';
+// import PropTypes from "prop-types";
+import MaterialButton from '@material-ui/core/Button';
 
 const Button = ({ children }) => {
   return (
-    <Teste/>
-  )
+    <MaterialButton variant="contained">{ children }</MaterialButton>
+  );
 }
 
 Button.propTypes = {};

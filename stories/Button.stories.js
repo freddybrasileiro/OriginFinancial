@@ -6,8 +6,8 @@ export default {
   component: Button,
 };
 
-export const ToStorybook = () => <Button />;
+export const ToStorybook = () => <Button>Confirm</Button>;
 
 ToStorybook.story = {
-  name: 'to Storybook',
+  name: 'default',
 };
