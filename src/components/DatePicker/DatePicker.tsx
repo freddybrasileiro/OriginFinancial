@@ -18,7 +18,7 @@ const DatePicker = ({ label, value, onChange }: DatePickerProps) => {
   const [decDisabled, setDecDisabled] = React.useState(false);
 
   const shouldDecDisabled = (newDate: Array<number>) => {
-    return newDate[0] === now.getMonth() && newDate[1] === now.getFullYear();
+    return newDate[0] <= now.getMonth() + 1 && newDate[1] === now.getFullYear();
   };
 
   const handleSetDate = (newDate: Array<number>) => {
