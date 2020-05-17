@@ -102,17 +102,12 @@ const overrides = {
   }
 }
 
-const defaultTypography = {
-  fontFamily: "'Work Sans', sans-serif"
+const typography = {
+  fontFamily: "'Work Sans', sans-serif",
 }
 
 export default createMuiTheme({
   overrides,
-  typography: {
-    ...defaultTypography,
-    h4: {
-      ...defaultTypography,
-    },
-  },
+  typography,
   palette,
 })

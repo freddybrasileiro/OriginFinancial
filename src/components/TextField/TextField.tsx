@@ -3,13 +3,13 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import MaterialTextField from '@material-ui/core/TextField';
 import { NumberFormatCustom } from '../../components/NumberFormatCustom';
 
-type ButtonProps = {
+type TextFieldProps = {
     label: string,
     adornment: string,
     placeholder: string,
 };
 
-const TextField = ({ label, adornment, placeholder }: ButtonProps) => (
+const TextField = ({ label, adornment, placeholder }: TextFieldProps) => (
     <MaterialTextField
         label={label}
         placeholder={placeholder}
