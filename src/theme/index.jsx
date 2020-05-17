@@ -1,7 +1,7 @@
-import { createMuiTheme } from "@material-ui/core/styles"
-import {pxToRem} from "../utils/pxToRem"
+import { createMuiTheme } from '@material-ui/core/styles';
+import { pxToRem } from '../utils/pxToRem';
 
-import {palette} from "./palette";
+import { palette } from './palette';
 
 const overrides = {
   MuiButton: {
@@ -10,32 +10,32 @@ const overrides = {
       borderRadius: pxToRem(32),
       width: pxToRem(400),
       height: pxToRem(56),
-      boxShadow: "none",
-      "&:hover": {
+      boxShadow: 'none',
+      '&:hover': {
         backgroundColor: palette.general.ctaHover,
-        boxShadow: "none",
-      }
+        boxShadow: 'none',
+      },
     },
     label: {
       fontWeight: 600,
-      fontStyle: "normal",
+      fontStyle: 'normal',
       fontSize: pxToRem(18),
       lineHeight: pxToRem(24),
       color: palette.general.white,
-      textTransform: "none",
-    }
+      textTransform: 'none',
+    },
   },
   MuiFormLabel: {
     root: {
       color: palette.general.darkBlue,
-      fontStyle: "normal",
+      fontStyle: 'normal',
       fontWeight: 500,
       fontSize: pxToRem(16),
       lineHeight: pxToRem(20),
-      "&.Mui-focused": {
+      '&.Mui-focused': {
         color: palette.general.darkBlue,
-      }
-    }
+      },
+    },
   },
   MuiInputBase: {
     root: {
@@ -43,29 +43,29 @@ const overrides = {
     },
     input: {
       padding: 0,
-      width: "unset",
-      flex: "1 1 auto",
-      fontStyle: "normal",
+      width: 'unset',
+      flex: '1 1 auto',
+      fontStyle: 'normal',
       fontWeight: 600,
       fontSize: pxToRem(20),
       letterSpacing: pxToRem(-0.166667),
       color: palette.general.darkBlue,
-    }
+    },
   },
   MuiInputAdornment: {
     root: {
       minWidth: pxToRem(54),
       height: pxToRem(54),
       maxHeight: pxToRem(54),
-      justifyContent: "center",
+      justifyContent: 'center',
       backgroundColor: palette.general.darkGray,
       borderRight: `${pxToRem(1)} solid ${palette.general.lightGray}`,
-      boxSizing: "border-box",
+      boxSizing: 'border-box',
       borderRadius: `${pxToRem(4)} 0 0 ${pxToRem(4)}`,
     },
     positionStart: {
-      marginRight: pxToRem(16)
-    }
+      marginRight: pxToRem(16),
+    },
   },
   MuiInput: {
     root: {
@@ -73,35 +73,35 @@ const overrides = {
       borderRadius: `${pxToRem(4)}`,
     },
     underline: {
-      "&:before": {
+      '&:before': {
         borderBottom: 0,
       },
-      "&:after": {
+      '&:after': {
         borderBottom: 0,
       },
-      "&:hover:not(.Mui-disabled):before": {
+      '&:hover:not(.Mui-disabled):before': {
         borderBottom: 0,
-      }
+      },
     },
   },
   MuiFormControl: {
     root: {
-      width: "100%"
-    }
+      width: '100%',
+    },
   },
   MuiInputLabel: {
     shrink: {
-      transform: "unset"
-    }
-  }
-}
+      transform: 'unset',
+    },
+  },
+};
 
 const typography = {
   fontFamily: "'Work Sans', sans-serif",
-}
+};
 
 export default createMuiTheme({
   overrides,
   typography,
   palette,
-})
+});

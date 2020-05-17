@@ -4,6 +4,6 @@ import { Header } from './index';
 
 describe('Header', () => {
   it('Should render the Header component', () => {
-    expect(shallow(<Header width="xs"/>)).toMatchSnapshot();
+    expect(shallow(<Header width="xs" />)).toMatchSnapshot();
   });
 });

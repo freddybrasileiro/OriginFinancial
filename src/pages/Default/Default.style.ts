@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import {pxToRem} from '../../utils/pxToRem';
-import {palette} from '../../theme/palette';
+import { pxToRem } from '../../utils/pxToRem';
+import { palette } from '../../theme/palette';
 
 type DefaultProps = {
-  width: string,
+  width: string;
 };
 
 export const Default = styled.div`
@@ -15,6 +15,7 @@ export const Default = styled.div`
   align-items: center;
 
   .content {
-    width: ${(props: DefaultProps) => props.width === "xs" ? "100%" : pxToRem(560)};
+    width: ${(props: DefaultProps) =>
+      props.width === 'xs' ? '100%' : pxToRem(560)};
   }
 `;

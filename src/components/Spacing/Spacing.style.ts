@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
-import {pxToRem} from '../../utils/pxToRem';
+import { pxToRem } from '../../utils/pxToRem';
 
 type SpacingProps = {
-  vertical: number,
+  vertical: number;
 };
 
 export const Spacing = styled.div`
   ${(props: SpacingProps) => {
-    if (props.vertical <= 0) return `height: ${pxToRem(4)};`
-    return `height: ${pxToRem(4 * props.vertical)};`
-  }
-  }
+    if (props.vertical <= 0) return `height: ${pxToRem(4)};`;
+    return `height: ${pxToRem(4 * props.vertical)};`;
+  }}
 `;

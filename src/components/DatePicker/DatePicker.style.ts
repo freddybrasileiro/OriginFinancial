@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import {pxToRem} from '../../utils/pxToRem';
-import {palette} from '../../theme/palette';
+import { pxToRem } from '../../utils/pxToRem';
+import { palette } from '../../theme/palette';
 
 export const DatePicker = styled.div`
   .picker {
@@ -11,23 +11,22 @@ export const DatePicker = styled.div`
     border-radius: ${pxToRem(4)};
     height: ${pxToRem(56)};
     display: flex;
-  
+
     > div {
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-  
+
     .arrow {
       background-color: ${palette.general.darkGray};
       min-width: ${pxToRem(48)};
       cursor: pointer;
-  
+
       :hover {
         background-color: ${palette.general.lightGray};
       }
-
     }
 
     .arrow.left.disabled {
@@ -36,19 +35,19 @@ export const DatePicker = styled.div`
         background-color: ${palette.general.darkGray};
       }
     }
-    
+
     .arrow.left {
       border-radius: ${pxToRem(4)} 0 0 ${pxToRem(4)};
     }
-    
+
     .arrow.right {
       border-radius: 0 ${pxToRem(4)} ${pxToRem(4)} 0;
-  
+
       svg {
         transform: rotate(180deg);
       }
     }
-  
+
     .content {
       flex: 1 1 auto;
       flex-direction: column;
