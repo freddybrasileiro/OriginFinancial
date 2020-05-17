@@ -8,7 +8,7 @@ type SpacingProps = {
 
 export const Spacing = styled.div`
   ${(props: SpacingProps) => {
-    if (!props.vertical || props.vertical <= 0) return `height: ${pxToRem(4)};`
+    if (props.vertical <= 0) return `height: ${pxToRem(4)};`
     return `height: ${pxToRem(4 * props.vertical)};`
   }
   }
