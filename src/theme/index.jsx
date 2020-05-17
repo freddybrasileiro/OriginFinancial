@@ -54,7 +54,7 @@ const overrides = {
   },
   MuiInputAdornment: {
     root: {
-      width: pxToRem(54),
+      minWidth: pxToRem(54),
       height: pxToRem(54),
       maxHeight: pxToRem(54),
       justifyContent: "center",

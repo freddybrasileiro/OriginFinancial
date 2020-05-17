@@ -21,7 +21,7 @@ export const DatePicker = styled.div`
   
     .arrow {
       background-color: ${palette.general.darkGray};
-      width: ${pxToRem(48)};
+      min-width: ${pxToRem(48)};
       cursor: pointer;
   
       :hover {
