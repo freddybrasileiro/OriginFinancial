@@ -6,6 +6,7 @@ export const palette = {
       ctaHover: "#6071cc",
       darkBlue: "#1C1E1F",
       darkGray: "#F4F8FA",
-      lightGray: "#E1E8ED"
+      lightGray: "#E1E8ED",
+      boxShadow: "rgba(150, 164, 176, 0.1)"
     }
 }
