@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import withWidth from '@material-ui/core/withWidth';
 
 import {Button} from '../../components/Button';
 import {Card} from '../../components/Card';
@@ -13,9 +14,10 @@ import * as S from './SavingGoal.style';
 
 type SavingGoalProps = {
     goal: string,
+    width: string,
 };
 
-const SavingGoal = ({ goal }: SavingGoalProps) => {
+const SavingGoal = ({ goal, width }: SavingGoalProps) => {
     const [totalAmount, setTotalAmount] = React.useState(25000);
     const onAmountChange = (event: any) => setTotalAmount(event.target.value);
     const now = new Date();
@@ -23,7 +25,7 @@ const SavingGoal = ({ goal }: SavingGoalProps) => {
     const onDateChange = (newDate: Array<number>) => setDate(newDate);
     return (
         <Card>
-            <S.SavingGoal>
+            <S.SavingGoal width={width}>
                 <Grid container spacing={0} className="grid">
                     <Grid item xs={12}>
                         <InsuranceAuto />
@@ -35,13 +37,13 @@ const SavingGoal = ({ goal }: SavingGoalProps) => {
                         <Text variant="body8">Saving goal</Text>
                     </Grid>
                     <Grid item xs={12}>
-                        <Spacing vertical={10} />
+                        <Spacing vertical={width === "xs" ? 8 : 10} />
                     </Grid>
                     <Grid container spacing={2} className="grid">
-                        <Grid item xs={6} md={12}>
+                        <Grid item xs={12} sm={6}>
                             <TextField label="Total amount" adornment="$" placeholder="0" value={totalAmount} defaultValue={totalAmount} onChange={onAmountChange} />
                         </Grid>
-                        <Grid item xs={6} md={12}>
+                        <Grid item xs={12} sm={6}>
                             <DatePicker label="Reach goal by" value={date} onChange={onDateChange} />
                         </Grid>
                     </Grid>
@@ -52,7 +54,7 @@ const SavingGoal = ({ goal }: SavingGoalProps) => {
                         <SimulationResult totalAmount={totalAmount} reachGoalBy={date} />
                     </Grid>
                     <Grid item xs={12}>
-                        <Spacing vertical={8} />
+                        <Spacing vertical={width === "xs" ? 9 : 8} />
                     </Grid>
                     <Grid item xs={12} className="center">
                         <Button>Confirm</Button>
@@ -63,4 +65,4 @@ const SavingGoal = ({ goal }: SavingGoalProps) => {
     )
 };
 
-export default SavingGoal;
+export default withWidth()(SavingGoal);
