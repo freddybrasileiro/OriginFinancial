@@ -69,6 +69,19 @@ export const Text = styled.span`
         line-height: ${pxToRem(20)};
         color: ${palette.general.mediumGray};
       `
+    } else if (props.variant === "body9") {
+      return `
+        font-size: ${pxToRem(24)};
+        line-height: ${pxToRem(32)};
+        color: ${palette.general.cta};
+      `
+    } else if (props.variant === "body10") {
+      return `
+        font-weight: 600;
+        font-size: ${pxToRem(24)};
+        line-height: ${pxToRem(32)};
+        color: ${palette.general.cta};
+      `
     }
     return '';
   }}
