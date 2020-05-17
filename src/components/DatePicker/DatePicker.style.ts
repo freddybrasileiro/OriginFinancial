@@ -9,7 +9,7 @@ export const DatePicker = styled.div`
     border: 1px solid ${palette.general.lightGray};
     box-sizing: border-box;
     border-radius: ${pxToRem(4)};
-    height: ${pxToRem(58)};
+    height: ${pxToRem(56)};
     display: flex;
   
     > div {

@@ -6,7 +6,7 @@ export default {
   component: TextField,
 };
 
-export const ToStorybook = () => <TextField adornment="$" placeholder="0" label="Total amount"/>;
+export const ToStorybook = () => <TextField adornment="$" placeholder="0" label="Total amount" defaultValue={25000} />;
 
 ToStorybook.story = {
   name: 'with adornment and mask',

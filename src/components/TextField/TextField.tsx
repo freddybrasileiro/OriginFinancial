@@ -7,12 +7,18 @@ type TextFieldProps = {
     label: string,
     adornment: string,
     placeholder: string,
+    value: number,
+    defaultValue: number,
+    onChange: Function
 };
 
-const TextField = ({ label, adornment, placeholder }: TextFieldProps) => (
+const TextField = ({ label, adornment, placeholder, value, defaultValue, onChange }: TextFieldProps) => (
     <MaterialTextField
         label={label}
         placeholder={placeholder}
+        value={value}
+        defaultValue={defaultValue}
+        onChange={onChange}
         InputProps={{
             startAdornment: <InputAdornment position="start">{adornment}</InputAdornment>,
             inputComponent: NumberFormatCustom as any

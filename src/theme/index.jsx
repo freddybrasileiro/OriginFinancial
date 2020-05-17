@@ -39,7 +39,7 @@ const overrides = {
   },
   MuiInputBase: {
     root: {
-      marginTop: `${pxToRem(20)} !important`,
+      marginTop: `${pxToRem(24)} !important`,
     },
     input: {
       padding: 0,
@@ -87,6 +87,11 @@ const overrides = {
   MuiFormControl: {
     root: {
       width: "100%"
+    }
+  },
+  MuiInputLabel: {
+    shrink: {
+      transform: "unset"
     }
   }
 }

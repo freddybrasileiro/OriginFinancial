@@ -7,6 +7,7 @@ export const palette = {
       darkBlue: "#1C1E1F",
       blue: "#0079FF",
       darkGray: "#F4F8FA",
+      mediumGray: "#657786",
       lightGray: "#E1E8ED",
       boxShadow: "rgba(150, 164, 176, 0.1)"
     }

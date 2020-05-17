@@ -8,31 +8,38 @@ import * as S from './DatePicker.style';
 
 type DatePickerProps = {
     label: string,
+    value: Array<number>,
+    onChange: Function
 };
 
-const DatePicker = ({ label }: DatePickerProps) => {
+const DatePicker = ({ label, value, onChange }: DatePickerProps) => {
     const now = new Date();
-    const [date, setDate] = React.useState([now.getMonth(), now.getFullYear() + 4]);
-    const [decDisabled, setDecDisabled] = React.useState(true);
+    const [date, setDate] = React.useState(value);
+    const [decDisabled, setDecDisabled] = React.useState(false);
     
     const shouldDecDisabled = (newDate: Array<number>) => {
         return newDate[0] === now.getMonth() && newDate[1] === now.getFullYear();
     }
 
+    const handleSetDate = (newDate: Array<number>) => {
+        setDate(newDate);
+        onChange(newDate);
+    }
+
     const handleDecDate = () => {
         if (decDisabled) return;
-        const newMonth = date[0] === 1 ? 12 : date[0] - 1;
-        const newYear = date[0] === 1 ? date[1] - 1 : date[1];
-        setDate([newMonth, newYear]);
+        const newMonth = date[0] === 0 ? 11 : date[0] - 1;
+        const newYear = date[0] === 0 ? date[1] - 1 : date[1];
+        handleSetDate([newMonth, newYear]);
         if(shouldDecDisabled([newMonth, newYear])) setDecDisabled(true);
         else setDecDisabled(false);
     }
     
     const handleIncDate = () => {
         setDecDisabled(false);
-        const newMonth = date[0] === 12 ? 1 : date[0] + 1;
-        const newYear = date[0] === 12 ? date[1] + 1 : date[1];
-        setDate([newMonth, newYear]);
+        const newMonth = date[0] === 11 ? 0 : date[0] + 1;
+        const newYear = date[0] === 11 ? date[1] + 1 : date[1];
+        handleSetDate([newMonth, newYear]);
     }
 
     return (

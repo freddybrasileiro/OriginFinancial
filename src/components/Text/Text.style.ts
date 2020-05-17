@@ -56,6 +56,19 @@ export const Text = styled.span`
         font-size: ${pxToRem(12)};
         line-height: ${pxToRem(16)};
       `
+    } else if (props.variant === "body7") {
+      return `
+        font-weight: 600;
+        font-size: ${pxToRem(32)};
+        line-height: ${pxToRem(40)};
+        letter-spacing: ${pxToRem(-0.266667)};
+      `
+    } else if (props.variant === "body8") {
+      return `
+        font-size: ${pxToRem(16)};
+        line-height: ${pxToRem(20)};
+        color: ${palette.general.mediumGray};
+      `
     }
     return '';
   }}
