@@ -7,8 +7,6 @@ import * as S from './DatePicker.style';
 
 type DatePickerProps = {
     label: string,
-    month: number,
-    year: number,
 };
 
 const months = [

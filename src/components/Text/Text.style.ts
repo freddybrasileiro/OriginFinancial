@@ -28,8 +28,8 @@ export const Text = styled.span`
     } else if (props.variant === "body2") {
       return `
         font-weight: normal;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: ${pxToRem(16)};
+        line-height: ${pxToRem(20)};
       `
     }
   }}
