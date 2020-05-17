@@ -12,7 +12,7 @@ type DatePickerProps = {
 
 const DatePicker = ({ label }: DatePickerProps) => {
     const now = new Date();
-    const [date, setDate] = React.useState([now.getMonth(), now.getFullYear()]);
+    const [date, setDate] = React.useState([now.getMonth(), now.getFullYear() + 4]);
     const [decDisabled, setDecDisabled] = React.useState(true);
     
     const shouldDecDisabled = (newDate: Array<number>) => {

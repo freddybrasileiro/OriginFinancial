@@ -6,7 +6,7 @@ export default {
   component: SimulationResult,
 };
 
-export const ToStorybook = () => <SimulationResult monthlyAmount={521} totalAmount={25000} reachGoalBy={[6, 2021]} />;
+export const ToStorybook = () => <SimulationResult totalAmount={25000} reachGoalBy={[4, 2024]} />;
 
 ToStorybook.story = {
   name: 'default',

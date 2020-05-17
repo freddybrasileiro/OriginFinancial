@@ -8,14 +8,13 @@ import * as S from './SimulationResult.style';
 
 type SimulationResultProps = {
     totalAmount: number,
-    monthlyAmount: number,
     reachGoalBy: Array<number>
 };
 
-const SimulationResult = ({ totalAmount, monthlyAmount, reachGoalBy }: SimulationResultProps) => {
+const SimulationResult = ({ totalAmount, reachGoalBy }: SimulationResultProps) => {
     const current = new Date();
     const months = (reachGoalBy[1] - current.getFullYear()) * 12 + reachGoalBy[0] - current.getMonth();
-
+    const monthlyAmount = Math.round(totalAmount / months);
     return (
         <Card>
             <S.SimulationResult>
