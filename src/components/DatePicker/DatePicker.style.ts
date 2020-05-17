@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import pxToRem from '../../utils/pxToRem';
-import { palette } from '../../theme';
+import {pxToRem} from '../../utils/pxToRem';
+import {palette} from '../../theme/palette';
 
 export const DatePicker = styled.div`
   .picker {

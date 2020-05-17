@@ -1,18 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles"
-import { generateRgbScale } from "./utils/generateRgbScale"
-import pxToRem from "./utils/pxToRem"
+import {pxToRem} from "../utils/pxToRem"
 
-export const palette = {
-  general: {
-    white: "#ffffff",
-    black: generateRgbScale(0, 0, 0),
-    cta: "#1B31A8",
-    ctaHover: "#6071cc",
-    darkBlue: "#1C1E1F",
-    darkGray: "#F4F8FA",
-    lightGray: "#E1E8ED"
-  }
-}
+import {palette} from "./palette";
 
 const overrides = {
   MuiButton: {

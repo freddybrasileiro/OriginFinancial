@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function SvgComponent(props) {
+function SvgComponent(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg width={10} height={19} viewBox="0 0 10 19" {...props}>
       <title>{"icon / forms / arrowL"}</title>

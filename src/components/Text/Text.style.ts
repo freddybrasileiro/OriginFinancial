@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import pxToRem from '../../utils/pxToRem';
-import { palette } from '../../theme';
+import {pxToRem} from '../../utils/pxToRem';
+import {palette} from '../../theme/palette';
 
 type TextProps = {
   variant: string,
@@ -32,5 +32,6 @@ export const Text = styled.span`
         line-height: ${pxToRem(20)};
       `
     }
+    return '';
   }}
 `;
