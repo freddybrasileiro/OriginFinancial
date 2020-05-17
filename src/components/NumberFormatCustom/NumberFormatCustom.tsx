@@ -25,7 +25,7 @@ function NumberFormatCustom(props: NumberFormatCustomProps) {
       thousandSeparator
       isNumericString
       allowNegative={false}
-      decimalScale={0}
+      decimalScale={2}
     />
   );
 }

@@ -20,7 +20,7 @@ type SavingGoalProps = {
 const SavingGoal = ({ goal, width }: SavingGoalProps) => {
   const [totalAmount, setTotalAmount] = React.useState(25000);
   const onAmountChange = (event: React.ChangeEvent<HTMLInputElement>) =>
-    setTotalAmount(parseInt(event.target.value));
+    setTotalAmount(parseFloat(event.target.value));
   const now = new Date();
   const [date, setDate] = React.useState([
     now.getMonth(),
