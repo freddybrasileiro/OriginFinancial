@@ -7,7 +7,7 @@ type SpacingProps = {
 };
 
 const Spacing = ({ vertical }: SpacingProps) => (
-    <S.Spacing/>
+    <S.Spacing vertical={vertical} />
 );
 
 export default Spacing;
