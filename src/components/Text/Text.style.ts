@@ -11,25 +11,50 @@ export const Text = styled.span`
   font-family: 'Work Sans', sans-serif;
   font-style: normal;
   color: ${palette.general.darkBlue};
+  font-weight: 500;
   ${(props: TextProps) => {
     if (props.variant === "label") {
       return `
-        font-weight: 500;
         font-size: ${pxToRem(16)};
         line-height: ${pxToRem(20)};
       `
     } else if (props.variant === "body1") {
       return `
         font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: -0.166667px;
+        font-size: ${pxToRem(20)};
+        line-height: ${pxToRem(24)};
+        letter-spacing: ${pxToRem(-0.166667)};
       `
     } else if (props.variant === "body2") {
       return `
-        font-weight: normal;
         font-size: ${pxToRem(16)};
         line-height: ${pxToRem(20)};
+      `
+    } else if (props.variant === "body3") {
+      return `
+        font-size: ${pxToRem(18)};
+        line-height: ${pxToRem(24)};
+      `
+    } else if (props.variant === "body4") {
+      return `
+        font-style: normal;
+        font-size: ${pxToRem(40)};
+        line-height: ${pxToRem(32)};
+        letter-spacing: ${pxToRem(-0.266667)};
+        color: ${palette.general.blue};
+      `
+    } else if (props.variant === "body5") {
+      return `
+        font-style: normal;
+        font-size: ${pxToRem(12)};
+        line-height: ${pxToRem(16)};
+      `
+    } else if (props.variant === "body6") {
+      return `
+        font-weight: 600;
+        font-style: normal;
+        font-size: ${pxToRem(12)};
+        line-height: ${pxToRem(16)};
       `
     }
     return '';

@@ -8,7 +8,7 @@ type TextProps = {
 };
 
 const Text = ({ children, variant }: TextProps) => (
-    <S.Text variant={variant}>{children}</S.Text>
+    <S.Text variant={variant} className={variant}>{children}</S.Text>
 );
 
 export default Text;

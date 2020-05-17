@@ -3,26 +3,12 @@ import React from 'react';
 import { Spacing } from '../../components/Spacing';
 import { Text } from '../../components/Text';
 import ArrowIcon from '../../icons/Arrow';
+import { months } from '../../utils/months';
 import * as S from './DatePicker.style';
 
 type DatePickerProps = {
     label: string,
 };
-
-const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "Septemper",
-    "October",
-    "November",
-    "Dezember"
-];
 
 const DatePicker = ({ label }: DatePickerProps) => {
     const now = new Date();
