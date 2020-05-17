@@ -9,7 +9,7 @@ export const DatePicker = styled.div`
     border: 1px solid ${palette.general.lightGray};
     box-sizing: border-box;
     border-radius: ${pxToRem(4)};
-    height: ${pxToRem(56)};
+    height: ${pxToRem(58)};
     display: flex;
   
     > div {
@@ -27,6 +27,14 @@ export const DatePicker = styled.div`
       :hover {
         background-color: ${palette.general.lightGray};
       }
+
+    }
+
+    .arrow.left.disabled {
+      cursor: default;
+      :hover {
+        background-color: ${palette.general.darkGray};
+      }
     }
     
     .arrow.left {
@@ -43,6 +51,7 @@ export const DatePicker = styled.div`
   
     .content {
       flex: 1 1 auto;
+      flex-direction: column;
     }
   }
 `;

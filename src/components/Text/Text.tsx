@@ -3,12 +3,12 @@ import React from 'react';
 import * as S from './Text.style';
 
 type TextProps = {
-    children: string,
+    children: any,
     variant: string,
 };
 
 const Text = ({ children, variant }: TextProps) => (
-    <S.Text>{children}</S.Text>
+    <S.Text variant={variant}>{children}</S.Text>
 );
 
 export default Text;
