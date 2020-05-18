@@ -1,4 +1,5 @@
 import React from 'react';
+import NumberFormat from 'react-number-format';
 
 import { Card } from '../../components/Card';
 import { Text } from '../../components/Text';
@@ -31,7 +32,7 @@ const SimulationResult = ({
           <Text variant="body5">
             You’re planning{' '}
             <Text variant="body6">{months} monthly deposits</Text> to reach your{' '}
-            <Text variant="body6">${totalAmount}</Text> goal by{' '}
+            <Text variant="body6">${<NumberFormat value={totalAmount} displayType={'text'} thousandSeparator={true} decimalScale={2}/>}</Text> goal by{' '}
             <Text variant="body6">
               {monthNames[reachGoalBy[0]]} {reachGoalBy[1]}
             </Text>
