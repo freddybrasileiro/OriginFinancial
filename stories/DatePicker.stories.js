@@ -7,7 +7,7 @@ export default {
 };
 
 export const ToStorybook = () => (
-  <DatePicker label="Reach goal by" value={[4, 2020]} onChange={() => {}} />
+  <DatePicker label="Reach goal by" value={[4, 2020]} />
 );
 
 ToStorybook.story = {

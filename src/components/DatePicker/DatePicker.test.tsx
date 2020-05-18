@@ -9,7 +9,6 @@ describe('DatePicker', () => {
         <DatePicker
           label="My date picker"
           value={[4, 2020]}
-          onChange={() => {}}
         />
       )
     ).toMatchSnapshot();

@@ -11,7 +11,7 @@ const SavingGoal = () => (
     <S.SavingGoal>
       <Spacing vertical={13} />
       <Text variant="body9">
-        Let's plan your <Text variant="body10">saving goal.</Text>
+        Let&apos;s plan your <Text variant="body10">saving goal.</Text>
       </Text>
       <Spacing vertical={10} />
       <SavingGoalComponent goal="Buy a home" />
