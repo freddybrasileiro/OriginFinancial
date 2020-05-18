@@ -2,6 +2,8 @@
 
 This is a solution proposed by to the `Origin Frontend Take-Home Assignment`, originally described at [https://github.com/OriginFinancial/frontend-take-home-assignment](https://github.com/OriginFinancial/frontend-take-home-assignment)
 
+The solution is available at [https://freddybrasileiro.github.io/OriginFinancial/](https://freddybrasileiro.github.io/OriginFinancial/)
+
 # Usage
 
 This project requires `Node >=12` and `NPM >= 6`.
