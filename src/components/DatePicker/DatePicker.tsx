@@ -12,7 +12,7 @@ type DatePickerProps = {
   onChange?: Function;
 };
 
-const DatePicker = ({ label, value, onChange = () => {} }: DatePickerProps) => {
+const DatePicker = ({ label, value, onChange }: DatePickerProps) => {
   const now = new Date();
   const [date, setDate] = React.useState(value);
   const [decDisabled, setDecDisabled] = React.useState(false);
@@ -23,7 +23,7 @@ const DatePicker = ({ label, value, onChange = () => {} }: DatePickerProps) => {
 
   const handleSetDate = (newDate: Array<number>) => {
     setDate(newDate);
-    onChange(newDate);
+    if (onChange) onChange(newDate);
   };
 
   const handleDecDate = () => {
