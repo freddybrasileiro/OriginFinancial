@@ -42,6 +42,20 @@ const DatePicker = ({ label, value, onChange }: DatePickerProps) => {
     handleSetDate([newMonth, newYear]);
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.keyCode === 37) handleDecDate();
+    else if (e.keyCode === 39) handleIncDate();
+  }
+
+  React.useEffect(
+    () => {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  );
+
   return (
     <S.DatePicker>
       <Text variant="label">{label}</Text>
