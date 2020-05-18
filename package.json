@@ -50,7 +50,9 @@
     "build": "parcel build ./src/index.html",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prettier": "prettier --write '**/*.js' '**/*.jsx' '**/*.ts' '**/*.tsx'"
+    "prettier": "prettier --write '**/*.js' '**/*.jsx' '**/*.ts' '**/*.tsx'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -61,7 +63,7 @@
   "bugs": {
     "url": "https://github.com/freddybrasileiro/OriginFinancial/issues"
   },
-  "homepage": "https://github.com/freddybrasileiro/OriginFinancial#readme",
+  "homepage": "https://freddybrasileiro.github.io/OriginFinancial/",
   "husky": {
     "hooks": {
         "pre-commit": "lint-staged"
