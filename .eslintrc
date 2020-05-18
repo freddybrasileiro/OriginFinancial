@@ -14,6 +14,7 @@
       "jsx": true // Allows for the parsing of JSX
     }
   },
+  "ignorePatterns": ["**/spec/setup.js"],
   "rules": {
     "react/prop-types": [0],
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
