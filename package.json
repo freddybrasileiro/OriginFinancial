@@ -53,7 +53,7 @@
     "build-storybook": "build-storybook",
     "prettier": "prettier --write '**/*.js' '**/*.jsx' '**/*.ts' '**/*.tsx'",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
